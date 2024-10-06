@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8 />
+    <!--=============== FAVICON ===============-->
+	<link rel="shortcut icon" href="/assets/img/logo.png" type="image/x-icon">
+    <title>AkashGanga</title>
+    <link rel="stylesheet" type="text/css" href="planet.css" />
+    <style>
+		body{
+			background-image: url(/img/LHS_1140_b_STZ3.png);
+		}
+	</style>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+    <!--==================== HEADER ====================-->
+	<header class="header" id="header">
+		<nav class="nav container">
+			<a href="#" class="nav__logo">
+				<img src="/assets/img/logo.png" alt="image">&nbsp;&nbsp;<h1>AkashGanga</h1>
+			</a>
+
+			<div class="nav__menu" id="nav-menu">
+				<ul class="nav__list">
+					<li>
+						<a href="#home" class="nav__link active-link">Home</a>
+					</li>
+
+					<li>
+						<a href="#travel" class="nav__link">Travel</a>
+					</li>
+
+					<li>
+						<a href="#explore" class="nav__link">Exploration</a>
+					</li>
+
+					<li>
+						<a href="#history" class="nav__link">History</a>
+					</li>
+				</ul>
+
+				<!-- Close button -->
+				<div class="nav__close" id="nav-close">
+					<i class="ri-close-large-line"></i>
+				</div>
+
+				<img src="assets/img/nav-comet.svg" alt="image" class="nav__img">
+			</div>
+
+			<!-- Toggle button -->
+			<div class="nav__toggle" id="nav-toggle">
+				<i class="ri-menu-4-line"></i>
+			</div>
+		</nav>
+	</header>
+
+<div class="planet-view">
+  <model-viewer id="proximab" src="/planets/exoplanet_sg10446623.glb" autoplay camera-controls style="transform: scale(1.7);"></model-viewer>
+  <div class="info-icon" onclick="toggleSidebar()">
+      <i class="fas fa-circle-info"></i>
+  </div>
+  <div id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+          <h2>LHS-1140-B</h2>
+      </div>
+      <div class="sidebar-content">
+        <div class="proxima-facts">
+          <ul> <li><strong>Distance:</strong> Located about 40 light-years away from Earth.</li> 
+            <li><strong>Star:</strong> Orbits a red dwarf star called LHS 1140 in the Cetus constellation.</li> 
+            <li><strong>Mass:</strong> Estimated to be about 6.98 times the mass of Earth.</li> 
+            <li><strong>Orbit Duration:</strong> Completes one orbit around its star in approximately 24.7 days.</li> 
+            <li><strong>Habitable Zone:</strong> Resides in the habitable zone, where liquid water could potentially exist.</li> 
+          </ul>
+            
+      </div>
+            <br>
+          <a href="https://github.com/chiragferwani/nasa-resources"><button class="button-50"><i class="fa fa-download"></i> &nbsp; &nbsp;Download Assets</button></a>
+          <!-- Add more information as needed -->
+      </div>
+      <div class="back-arrow" onclick="toggleSidebar()">
+          <i class="fas fa-arrow-right"></i>
+      </div>
+  </div>
+</div>
+
+<script>
+  function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active');
+  }
+</script>
+    <!--=============== SCROLLREVEAL ===============-->
+	<script src="assets/js/scrollreveal.min.js"></script>
+
+	<!--=============== SWIPER JS ===============-->
+	<script src="assets/js/swiper-bundle.min.js"></script>
+
+	<!--=============== MAIN JS ===============-->
+	<script src="assets/js/main.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+  </body>
+</html>
