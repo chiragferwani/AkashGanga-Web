@@ -1,3 +1,5 @@
+@import url('../assets/css/spidey-theme.css');
+
 body{
     background-color: black;
     background-image: url('img/earth.png');
@@ -444,4 +446,34 @@ img {
     margin: 10px 0; /* Space between bullet points */
     font-size: 1.1em; /* Slightly larger font for readability */
     line-height: 1.5; /* Line height for better spacing */
+}
+
+/* Floating Spider-Man SVG Graphic on Exoplanet View */
+.exoplanet-spidey-float {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    max-width: 150px;
+    width: 25vw;
+    height: auto;
+    z-index: 90;
+    filter: drop-shadow(0 0 15px #ff003c) drop-shadow(0 0 10px #00d2ff) brightness(0) invert(1);
+    opacity: 0.88;
+    pointer-events: none;
+    animation: spiderFloat 4s ease-in-out infinite;
+}
+
+/* Sidebar Spidey Graphic Emblem */
+.sidebar-spidey-svg {
+    max-width: 130px;
+    width: 100%;
+    height: auto;
+    margin: 10px auto 15px;
+    display: block;
+    filter: drop-shadow(0 0 15px #ff003c) drop-shadow(0 0 10px #00d2ff) brightness(0) invert(1);
+}
+
+@keyframes spiderFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(2deg); }
 }

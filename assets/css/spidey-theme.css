@@ -1,0 +1,379 @@
+/*==================================================================
+  SPIDER-MAN THEME STYLES (COLOR SCHEME, WEBS, COMIC BADGES, GLOWS)
+==================================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,700&display=swap');
+
+:root {
+  --spidey-red: #ff003c;
+  --spidey-red-dark: #b30024;
+  --spidey-blue: #00d2ff;
+  --spidey-blue-dark: #0052d4;
+  --spidey-dark-bg: #090c15;
+  --spidey-card-bg: rgba(15, 23, 42, 0.85);
+  --spidey-yellow: #ffe600;
+  --spidey-font-title: 'Bebas Neue', 'Audiowide', cursive;
+  --spidey-glow-red: 0 0 20px rgba(255, 0, 60, 0.6);
+  --spidey-glow-blue: 0 0 20px rgba(0, 210, 255, 0.6);
+}
+
+/* Background Spider Web Network Pattern */
+body {
+  background-color: var(--spidey-dark-bg);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(255, 0, 60, 0.15), transparent 70%),
+    radial-gradient(circle at 100% 100%, rgba(0, 210, 255, 0.15), transparent 70%),
+    url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0 L50 100 M0 50 L100 50 M0 0 L100 100 M100 0 L0 100' stroke='rgba(255, 255, 255, 0.04)' stroke-width='1'/%3E%3Ccircle cx='50' cy='50' r='20' stroke='rgba(255, 255, 255, 0.03)' stroke-width='1' fill='none'/%3E%3Ccircle cx='50' cy='50' r='40' stroke='rgba(255, 255, 255, 0.03)' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  color: #e2e8f0;
+}
+
+/* Spider-Man Header & Text Typography */
+h1, h2, h3, .home__title, .section__title, .login-container h1 {
+  color: #ffffff !important;
+  font-family: var(--spidey-font-title) !important;
+  letter-spacing: 2px !important;
+  text-shadow: 0 0 15px rgba(255, 0, 60, 0.95), 0 0 25px rgba(0, 210, 255, 0.75) !important;
+}
+
+/* Fix Hero Text Overlapping */
+.home__title {
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+
+.home__title span {
+  display: inline-block !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.home__data h1 {
+  margin-top: 12px !important;
+  margin-bottom: 20px !important;
+  line-height: 1.15 !important;
+  position: relative !important;
+  z-index: 2 !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 20px rgba(255, 0, 60, 0.95), 0 0 30px rgba(0, 210, 255, 0.75) !important;
+}
+
+.text_style {
+  margin-top: 15px !important;
+  margin-bottom: 25px !important;
+  position: relative !important;
+  z-index: 2 !important;
+  line-height: 1.6 !important;
+}
+
+.login-container p span {
+  background: #0f172a !important;
+  color: #00d2ff !important;
+  border: 1px solid #ff003c !important;
+  border-radius: 12px !important;
+  padding: 4px 14px !important;
+  font-weight: 700 !important;
+}
+
+/* Spidey Pill Badge */
+.spidey-badge, .home__title span {
+  background: linear-gradient(135deg, #ff003c 0%, #0052d4 100%) !important;
+  border: 2px solid #ff003c !important;
+  box-shadow: var(--spidey-glow-red) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  border-radius: 30px !important;
+  letter-spacing: 1.5px !important;
+}
+
+/* Spidey Glowing Spider Web Buttons */
+.button, .button-50, #submit, #sign-up, #create-acct-btn, #return-btn {
+  background: linear-gradient(135deg, #ff003c 0%, #0052d4 100%) !important;
+  border: 2px solid #00d2ff !important;
+  color: #ffffff !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  box-shadow: 0 4px 15px rgba(255, 0, 60, 0.4), inset 0 0 10px rgba(0, 210, 255, 0.3) !important;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  cursor: pointer !important;
+}
+
+.button:hover, .button-50:hover, #submit:hover, #sign-up:hover, #create-acct-btn:hover {
+  transform: translateY(-3px) scale(1.03) !important;
+  box-shadow: 0 8px 25px rgba(0, 210, 255, 0.7), 0 0 15px rgba(255, 0, 60, 0.8) !important;
+  border-color: #ff003c !important;
+}
+
+/* Spider Web Overlay on Hover for Buttons */
+.button::before, .button-50::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -50% !important;
+  left: -50% !important;
+  width: 200% !important;
+  height: 200% !important;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%) !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s !important;
+}
+
+.button:hover::before, .button-50:hover::before {
+  opacity: 1 !important;
+}
+
+/* Spider-Man Cards (Travel Swiper & History Cards) */
+.travel__card, .history__card, .login-container {
+  background: var(--spidey-card-bg) !important;
+  border: 2px solid rgba(255, 0, 60, 0.4) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(0, 210, 255, 0.1) !important;
+  backdrop-filter: blur(12px) !important;
+  transition: all 0.4s ease !important;
+  position: relative !important;
+}
+
+.travel__card:hover, .history__card:hover {
+  border-color: #00d2ff !important;
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 0 15px 35px rgba(0, 210, 255, 0.3), 0 0 20px rgba(255, 0, 60, 0.4) !important;
+}
+
+/* Top corner web ornament for cards */
+.travel__card::after, .history__card::after, .login-container::after {
+  content: '🕸️' !important;
+  position: absolute !important;
+  top: 8px !important;
+  right: 12px !important;
+  font-size: 20px !important;
+  opacity: 0.7 !important;
+  filter: drop-shadow(0 0 5px #ff003c) !important;
+}
+
+/* Contact Section Unified Spidey Form (No Double Box) */
+.contact__form {
+  background: rgba(15, 23, 42, 0.9) !important;
+  border: 2px solid #ff003c !important;
+  border-radius: 16px !important;
+  box-shadow: 0 0 25px rgba(255, 0, 60, 0.4), inset 0 0 15px rgba(0, 210, 255, 0.2) !important;
+  backdrop-filter: blur(12px) !important;
+  padding: 8px 8px 8px 20px !important;
+  align-items: center !important;
+}
+
+.contact__input {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  padding: 8px 0 !important;
+}
+
+.contact__input:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Inputs with Web Shooter Glow */
+input {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border: 2px solid #0052d4 !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5) !important;
+  transition: all 0.3s ease !important;
+}
+
+input:focus {
+  border-color: #ff003c !important;
+  box-shadow: 0 0 14px rgba(255, 0, 60, 0.8), inset 0 0 10px rgba(0, 210, 255, 0.3) !important;
+  outline: none !important;
+}
+
+input::placeholder, .contact__input::placeholder {
+  color: #94a3b8 !important;
+  opacity: 1 !important;
+}
+
+/* Spider-Sense Floating HUD Widget */
+.spidey-hud-container {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.spidey-sense-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 2px solid #ffe600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 230, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.spidey-sense-pulse {
+  width: 10px;
+  height: 10px;
+  background-color: #ffe600;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ffe600;
+  animation: spiderSensePulse 1s infinite alternate;
+}
+
+@keyframes spiderSensePulse {
+  0% { transform: scale(0.8); opacity: 0.5; box-shadow: 0 0 5px #ffe600; }
+  100% { transform: scale(1.4); opacity: 1; box-shadow: 0 0 18px #ff003c; background-color: #ff003c; }
+}
+
+.spidey-sense-text {
+  color: #ffe600;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.spidey-sound-btn {
+  background: linear-gradient(135deg, #ff003c, #0052d4);
+  border: 2px solid #00d2ff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(0, 210, 255, 0.5);
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.spidey-sound-btn.muted {
+  background: #334155;
+  border-color: #64748b;
+  box-shadow: none;
+}
+
+.spidey-sound-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Spidey 3D Card / Emblem Showcase */
+.spidey-3d-card {
+  perspective: 1000px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  justify-self: center !important;
+  align-self: center !important;
+  grid-column: 1 / -1 !important;
+  margin: 30px auto !important;
+  width: 100% !important;
+  max-width: 450px !important;
+  text-align: center !important;
+  transition: transform 0.1s ease-out !important;
+}
+
+.spidey-3d-inner {
+  background: rgba(15, 23, 42, 0.85) !important;
+  border: 2px solid #ff003c !important;
+  padding: 24px 36px !important;
+  border-radius: 20px !important;
+  box-shadow: 0 0 30px rgba(255, 0, 60, 0.5), inset 0 0 20px rgba(0, 210, 255, 0.3) !important;
+  text-align: center !important;
+  backdrop-filter: blur(12px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+}
+
+.spidey-spider-badge {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+.spidey-spider-svg {
+  filter: drop-shadow(0 0 10px #ff003c);
+  animation: spiderFloat 4s ease-in-out infinite;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+@keyframes spiderFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+.spidey-hero-title {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  text-align: center !important;
+  margin-top: 12px !important;
+}
+
+.spidey-tag {
+  display: inline-block !important;
+  margin-top: 10px !important;
+  color: #00d2ff !important;
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 18px !important;
+  letter-spacing: 2px !important;
+  text-align: center !important;
+}
+
+/* Spider-Man Section SVG Graphics from assets/svgs/ */
+.spidey-section-svg {
+  max-width: 420px;
+  width: 90%;
+  height: auto;
+  margin: 30px auto;
+  display: block;
+  filter: drop-shadow(0 0 18px rgba(255, 0, 60, 0.95)) drop-shadow(0 0 25px rgba(0, 210, 255, 0.85)) brightness(0) invert(1);
+  transition: transform 0.4s ease, filter 0.4s ease;
+  opacity: 0.95;
+}
+
+.spidey-section-svg:hover {
+  transform: scale(1.08) rotate(2deg);
+  filter: drop-shadow(0 0 30px rgba(255, 0, 60, 1)) drop-shadow(0 0 35px rgba(0, 210, 255, 1)) brightness(0) invert(1);
+  opacity: 1;
+}
+
+/* Scrollbar Spidey Style */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #090c15;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff003c, #0052d4);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00d2ff;
+}

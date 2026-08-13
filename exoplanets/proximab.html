@@ -7,7 +7,10 @@
     <title>AkashGanga</title>
     <style>
       body{
-        background-image: url(/assets/img/proxima.png);
+        background-image: url('../assets/img/proxima.png') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
       }
     </style>
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
@@ -56,6 +59,7 @@
 	</header>
 
 <div class="planet-view">
+  <img src="../assets/svgs/svgwaves_io_spiderman (3).svg" class="exoplanet-spidey-float" alt="Spider-Man Graphic">
   <model-viewer id="proximab" src="/planets/Proxima_b.glb" autoplay camera-controls></model-viewer>
   <div class="info-icon" onclick="toggleSidebar()">
       <i class="fas fa-circle-info"></i>
@@ -63,6 +67,7 @@
   <div id="sidebar" class="sidebar">
       <div class="sidebar-header">
           <h2>Proxima Centauri B</h2>
+          <img src="../assets/svgs/svgwaves_io_spiderman (2).svg" class="sidebar-spidey-svg" alt="Spider-Man Graphic">
       </div>
       <div class="sidebar-content">
         <div class="proxima-facts">
@@ -99,5 +104,6 @@
 	<!--=============== MAIN JS ===============-->
 	<script src="assets/js/main.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <script src="../assets/js/spidey-effects.js"></script>
   </body>
 </html>

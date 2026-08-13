@@ -3,36 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AkashGanga</title>
+  <title>AkashGanga | Spider-Verse Edition</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/spidey-theme.css">
    <!-- Favicon -->
    <link href="img/logo.png" rel="icon">
 </head>
 <body>
   <div class="container">
     <div class="login-container">
+      <div class="spidey-badge" style="text-align: center; margin-bottom: 20px; font-size: 13px; padding: 6px 16px; width: max-content; margin-left: auto; margin-right: auto;">
+        🕷️ SPIDER-VERSE SECURE PORTAL
+      </div>
       <div id="main" name="signin">
         <h1>SIGN IN</h1>
         <input id="email" type="text" placeholder="Email" required>
         <input id="password" type="password" placeholder="Password" required>
-        <button id="submit" class="button" style="width: 340px; height: 60px; align-items: center; font-size: 18px;">Submit</button>
-        <p><span>or</span></p>
-        <button id="sign-up" class="button" style="width:340px; height: 60px; align-items: center; font-size: 18px;">Sign Up</button>
+        <button id="submit" class="button" style="width: 100%; height: 52px; font-size: 16px; margin-top: 10px;">Submit</button>
+        <p style="margin: 20px 0; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.2); line-height: 0.1em;"><span style="background: #0f172a; color: #00d2ff; padding: 4px 14px; font-weight: 700; border-radius: 12px; border: 1px solid #ff003c;">or</span></p>
+        <button id="sign-up" class="button" style="width: 100%; height: 52px; font-size: 16px;">Sign Up</button>
       </div>
 
-      <div id="create-acct">
+      <div id="create-acct" style="display: none;">
         <h1>Create an Account</h1>
         <input id="email-signup" type="text" placeholder="Email *" required>
         <input id="password-signup" type="password" placeholder="Password *" required>
-        <button id="create-acct-btn" class="button" style="width: 340px; height: 60px; align-items: center; font-size: 18px;">Create Account</button>
-        <p><span>or</span></p>
-        <button id="return-btn" class="button" style="width: 340px; height: 60px; align-items: center; font-size: 18px;">Return to Login</button>
+        <button id="create-acct-btn" class="button" style="width: 100%; height: 52px; font-size: 16px; margin-top: 10px;">Create Account</button>
+        <p style="margin: 20px 0; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.2); line-height: 0.1em;"><span style="background: #0f172a; color: #00d2ff; padding: 4px 14px; font-weight: 700; border-radius: 12px; border: 1px solid #ff003c;">or</span></p>
+        <button id="return-btn" class="button" style="width: 100%; height: 52px; font-size: 16px;">Return to Login</button>
       </div>
     </div>
-    <div class="image-container">
-      <img src="img/loginimgtry.png" alt="Illustration">
+    <div class="image-container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 15px;">
+      <img src="assets/svgs/svgwaves_io_spiderman (6).svg" class="spidey-section-svg" alt="Spider-Man Graphic" style="max-height: 240px; width: auto; margin: 0 auto; filter: drop-shadow(0 0 20px #ff003c) drop-shadow(0 0 15px #00d2ff) brightness(0) invert(1);">
+      <img src="img/loginimgtry.png" alt="AkashGanga Illustration" style="max-height: 100px; width: auto; opacity: 0.9;">
     </div>
   </div>
+  <script src="assets/js/spidey-effects.js"></script>
   <script type="module" src="script.js"></script>
 </body>
 </html>
